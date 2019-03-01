@@ -4,6 +4,9 @@ body {
 
 h1 {
     text-align: center;
+    color: #ff00b2;
+    font-size: 2.7em;
+    letter-spacing: 0.4em;
 }
 
 #image-list {
@@ -27,16 +30,28 @@ h1 {
     width: 100%;
 }
 
-#form-section {
+#form-section, #paging-section {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
+button {
+    margin: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#previous-button, #next-button {
+    color: #ff00b2;
+    font-size: 1.7em;
+    border: none;
+}
+
 #input-section {
     margin-bottom: 15px;
 }
+
 
 #medium {
     margin-right: 20px;

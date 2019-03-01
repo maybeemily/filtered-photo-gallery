@@ -13,17 +13,24 @@
     <main>
         <section id="form-section">
         <form id="filter-form">
-            <p>Filter by:</p>
             <div id="input-section">
-                <label for="medium">Medium: </label>
-                <input type="text" name="medium" id="medium">
-                <label for="animals"># of Animals: </label>
-                <input type="text" name="animals" id="animals">
-             
-            <button>Submit</button>
-        </div>
+                <p>Filter by:
+                    <label for="medium">medium used: </label>
+                    <input type="text" name="medium" id="medium">
+                    <label for="animals"># of animals: </label>
+                    <input type="text" name="animals" id="animals">
+                    <button>Submit</button>
+                 </p>
+            </div>
         </form>
         </section>
+        <section id="paging-section">
+                <button id="previous-button">&lt; &lt; </button>
+                <div>
+                    page <span id="current-page">1</span> of <span id="total-pages"></span>
+                </div>
+                <button id="next-button"> &gt; &gt;</button>
+            </section>
         <ul id="image-list">
         </ul>
     </main>
