@@ -63,6 +63,55 @@ const images = [
         'animalNumber': 3
     }, 
 
+    {
+        'url': 'https://farm4.staticflickr.com/3064/2588945015_a1b09f4b4f_b.jpg',
+        'title': 'city to city',
+        'description': 'a block print of two cities talking to each other',
+        'medium': 'block print',
+        'animalNumber': 0
+    }, 
+
+    {
+        'url': 'https://farm4.staticflickr.com/3036/2585793327_c8aa420512_o.jpg',
+        'title': 'self portrait',
+        'description': 'a gum print made with watercolor of emily',
+        'medium': 'watercolor',
+        'animalNumber': 1
+    }, 
+
+    {
+        'url': 'https://farm3.staticflickr.com/2383/5734359862_191835a860_b.jpg',
+        'title': 'may day',
+        'description': 'an embroidery of a girl with a wreath on her head',
+        'medium': 'embroidery',
+        'animalNumber': 1
+    }, 
+
+    {
+        'url': 'https://farm4.staticflickr.com/3120/5734359990_35681b631d_b.jpg',
+        'title': 'hide and seek',
+        'description': 'an embroidery of a blindfolded wolf',
+        'medium': 'embroidery',
+        'animalNumber': 1
+    }, 
+
+    {
+        'url': 'https://farm4.staticflickr.com/3331/5734360664_caa105164a_b.jpg',
+        'title': 'robin',
+        'description': 'an embroidery of a robin',
+        'medium': 'embroidery',
+        'animalNumber': 1
+    }, 
+
+    {
+        'url': 'https://farm6.staticflickr.com/5188/5734359550_ed015b4a94_b.jpg',
+        'title': 'bee tree',
+        'description': 'an embroidery of a tree surrounded by bees',
+        'medium': 'embroidery',
+        'animalNumber': 1
+    }, 
+    
+    
 ];
 
 export default images;
