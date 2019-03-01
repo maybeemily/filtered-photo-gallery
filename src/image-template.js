@@ -4,7 +4,7 @@ function makeImageTemplate(image) {
     <h2>${image.title}</h2>
     <p>Medium: ${image.medium}</p>
     <p class="animal-number"># of Animals: ${image.animalNumber}</p>
-    <img src="${image.url}">
+   <a href="${image.url}"><img src="${image.src}"></a>
     
     </li>
     `;
