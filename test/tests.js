@@ -1,29 +1,22 @@
 import './html-equal.js';
+import filteredImages from '../src/filtered-images.js';
 
 const test = QUnit.test;
 
-function filteredImages(images, filter) {
-    return images.filter(image => {
-        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-        const hasAnimals = !filter.animalNumber || image.animalNumber >= filter.animalNumber;
-        return hasKeyword && hasAnimals;
-    });
-}
-
 const images = [
-    { title: 'city', keyword: 'watercolor', animalNumber: '0' },
-    { title: 'nature party', keyword: 'embroidery', animalNumber: '1' },
-    { title: 'flower', keyword: 'watercolor', animalNumber: '0' }
+    { title: 'city', medium: 'watercolor', animalNumber: '0' },
+    { title: 'nature party', medium: 'embroidery', animalNumber: '1' },
+    { title: 'flower', medium: 'watercolor', animalNumber: '0' }
 ];
 
-test('if keyword watercolor is selected, show only watercolor images', assert => {
-    const filterChoice = { keyword: 'watercolor' };
+test('if medium watercolor is selected, show only watercolor images', assert => {
+    const filterChoice = { medium: 'watercolor' };
 
     const filtered = filteredImages(images, filterChoice);
 
     assert.deepEqual(filtered, [
-        { title: 'city', keyword: 'watercolor', animalNumber: '0' },
-        { title: 'flower', keyword: 'watercolor', animalNumber: '0' }
+        { title: 'city', medium: 'watercolor', animalNumber: '0' },
+        { title: 'flower', medium: 'watercolor', animalNumber: '0' }
     ]);
 });
 
@@ -33,17 +26,17 @@ test('if number of animals is 1, return the images with 1 animal', assert => {
     const filtered = filteredImages(images, filterChoice);
 
     assert.deepEqual(filtered, [
-        { title: 'nature party', keyword: 'embroidery', animalNumber: '1' },
+        { title: 'nature party', medium: 'embroidery', animalNumber: '1' },
     ]);
 });
 
-test('if no keyword entered, show all images', assert => {
-    const filterChoice = { keyword: '' };
+test('if no medium entered, show all images', assert => {
+    const filterChoice = { medium: '' };
     const filtered = filteredImages(images, filterChoice);
 
     assert.deepEqual(filtered, [
-        { title: 'city', keyword: 'watercolor', animalNumber: '0' },
-        { title: 'nature party', keyword: 'embroidery', animalNumber: '1' },
-        { title: 'flower', keyword: 'watercolor', animalNumber: '0' }
+        { title: 'city', medium: 'watercolor', animalNumber: '0' },
+        { title: 'nature party', medium: 'embroidery', animalNumber: '1' },
+        { title: 'flower', medium: 'watercolor', animalNumber: '0' }
     ]);
 });

@@ -13,9 +13,10 @@ export default function loadFilters(callback) {
         }
 
         const filter = {
-            keyword: formData.get('medium'),
-            animals: animals
+            medium: formData.get('medium'),
+            animalNumber: animals
         };
+        console.log(filter);
 
         callback(filter);
     });
