@@ -38,12 +38,12 @@ h1 {
 }
 
 button {
-    margin: 20px;
+    margin: 10px;
     font-family: 'Raleway', sans-serif;
     border: none;
 }
 
-#filter-button {
+#filter-button, #reset-button {
     background-color: #ff00b2;
     color: white;
     padding: 8px;

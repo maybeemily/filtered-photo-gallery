@@ -4,19 +4,38 @@ import loadFilters from './filter-component.js';
 import filteredImages from './filtered-images.js';
 import loadPaging from './paging-component.js';
 import pageArray from './paging-array.js';
+const prevButton = document.getElementById('previous-button');
+const nextButton = document.getElementById('next-button');
+
+const totalPageDisplay = document.getElementById('total-pages');
+
+let filtered = null;
+const numberPerPage = 8;
+
+let list = filtered ? filtered : images;
+
+loadFilters(filter => {
+    
+    filtered = filteredImages(images, filter);
+    list = filtered ? filtered : images;
+    loadImages(list);
+
+    const totalPageCount = Math.ceil(list.length / numberPerPage);
+
+    //let currentPageNumber = (list.length) / numberPerPage ;
+
+    //totalPageDisplay.textContent = totalPageCount;
+    //nextButton.disabled = currentPageNumber === totalPageCount;
+
+});
 
 
-
-loadPaging(images.length, pagingOptions => {
+loadPaging(list.length, pagingOptions => {
     const pagedImages = pageArray(images, pagingOptions);
     loadImages(pagedImages);
 });
 
-loadFilters(filter => {
-    const filtered = filteredImages(images, filter);
 
-    loadImages(filtered);
-});
 
 
 

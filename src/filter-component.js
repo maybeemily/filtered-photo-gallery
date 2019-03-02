@@ -1,5 +1,6 @@
 const filterForm = document.getElementById('filter-form');
 
+
 export default function loadFilters(callback) {
     filterForm.addEventListener('submit', event => {
         event.preventDefault();
@@ -16,7 +17,7 @@ export default function loadFilters(callback) {
             medium: formData.get('medium'),
             animalNumber: animals
         };
-        console.log(filter);
+        
 
         callback(filter);
     });

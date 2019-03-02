@@ -6,6 +6,8 @@ const totalPageDisplay = document.getElementById('total-pages');
 const numberPerPage = 8;
 
 function loadPaging(totalCount, callback) {
+
+    console.log(totalCount);
     const totalPageCount = Math.ceil(totalCount / numberPerPage);
 
     totalPageDisplay.textContent = totalPageCount;
@@ -34,6 +36,8 @@ function loadPaging(totalCount, callback) {
             page: currentPageNumber,
             perPage: numberPerPage
         };
+        
+        console.log(pagingOptions);
 
         callback(pagingOptions);
         nextButton.disabled = currentPageNumber === totalPageCount;
