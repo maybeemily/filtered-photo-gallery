@@ -40,12 +40,20 @@ h1 {
 button {
     margin: 20px;
     font-family: 'Raleway', sans-serif;
+    border: none;
+}
+
+#filter-button {
+    background-color: #ff00b2;
+    color: white;
+    padding: 8px;
+    border-radius: 2px;
 }
 
 #previous-button, #next-button {
     color: #ff00b2;
     font-size: 1.7em;
-    border: none;
+    
 }
 
 #input-section {
