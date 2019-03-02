@@ -4,7 +4,7 @@ import loadFilters from './filter-component.js';
 import filteredImages from './filtered-images.js';
 import loadPaging from './paging-component.js';
 import pageArray from './paging-array.js';
-const prevButton = document.getElementById('previous-button');
+//const prevButton = document.getElementById('previous-button');
 const nextButton = document.getElementById('next-button');
 
 const totalPageDisplay = document.getElementById('total-pages');
@@ -22,10 +22,13 @@ loadFilters(filter => {
 
     const totalPageCount = Math.ceil(list.length / numberPerPage);
 
+    //FIGURE OUT CURRENT PAGE NUMBER....!!!!
     //let currentPageNumber = (list.length) / numberPerPage ;
 
-    //totalPageDisplay.textContent = totalPageCount;
-    //nextButton.disabled = currentPageNumber === totalPageCount;
+    totalPageDisplay.textContent = totalPageCount;
+    if(currentPageNumber === totalPageCount) {
+        nextButton.classList.add('hidden');
+    }
 
 });
 
